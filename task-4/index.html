@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cozy To-Do</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">📜 My  To-Do List</h1>
+
+    <div class="todo-list" id="taskContainer"></div>
+
+    <button class="add-task-btn" id="addBtn">+ Add Task</button>
+
+    <div class="modal" id="modal">
+      <div class="modal-box">
+        <input type="text" id="taskInput" placeholder="Task title..." />
+        <input type="datetime-local" id="taskTime" />
+        <button id="saveTask">Save Task</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>🌼 “Small tasks make great days.” 🌼</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
