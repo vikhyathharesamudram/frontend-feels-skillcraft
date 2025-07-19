@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364),
+              url('https://images.unsplash.com/photo-1602524818403-3b55f4bd1fc4') no-repeat center center/cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  transition: 0.4s ease;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px 50px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.logo {
+  font-size: 26px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links li a {
+  color: #ffffffcc;
+  text-decoration: none;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: cyan;
+  bottom: -5px;
+  left: 0;
+  transition: 0.4s ease;
+}
+
+.nav-links li a:hover {
+  color: cyan;
+  letter-spacing: 1px;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 0 8px #0ff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  letter-spacing: 1px;
+}
+
+.features, .projects, .contact {
+  padding: 100px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(6px);
+}
+
+.features h2, .projects h2, .contact h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.feature-grid, .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.feature-box, .project-card {
+  background: rgba(0,0,0,0.3);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover, .project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px cyan;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: cyan;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #00ffff;
+  transform: scale(1.05);
+}
